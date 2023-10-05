@@ -14,7 +14,7 @@ export default function Header(props: HeaderProps) {
             <Title title={props.title}/>
             <div className="flex flex-grow justify-end items-center pb-2 p-2">
                 <UserAvatar className="ml-3 mr-3" />
-                <SwitcherTheme theme={theme} onSwitch={onSwitchTheme} />
+                <SwitcherTheme theme={theme ?? 'dark'} onSwitch={onSwitchTheme} />
             </div>
         </div>
     )

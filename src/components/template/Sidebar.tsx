@@ -1,7 +1,7 @@
 //import useAuth from "../../data/hook/useAuth"
 import Image from "next/image";
 import SidebarItem from "./SidebarItem";
-import { IconBell, IconExit, IconHome, IconSettings } from "./icons";
+import { IconApp, IconBell, IconExit, IconHome, IconNewApp, IconSettings } from "./icons";
 
 export default function Sidebar() {
  //   const { logout } = useAuth()
@@ -11,13 +11,15 @@ export default function Sidebar() {
                 <Image src={'/images/cnp_logo.png'}
                     width="150"
                     height="50"
+                    priority
                     alt="logo"
                     className="cursor-pointer"
                 />
             </div>
             <ul className="flex-grow">
                 <SidebarItem url="/" text="Início" icon={IconHome} />
-                <SidebarItem url="/projetos" text="Projetos" icon={IconHome} />
+                <SidebarItem url="/projetos/novo" text="Novo Projeto" icon={IconNewApp} />                
+                <SidebarItem url="/projetos/lista" text="Meus Projetos" icon={IconApp} />
                 <SidebarItem url="/ajustes" text="Ajustes" icon={IconSettings} />
                 <SidebarItem url="/notificacoes" text="Notificações" icon={IconBell} />
             </ul>
@@ -26,7 +28,7 @@ export default function Sidebar() {
                     text="Sair" 
                     icon={IconExit} 
                     onClick={() => console.log('aki')}
-                    className="text-red-600 dark:text-red-400 hover:bg-red-400 hover:text-white dark:hover:text-white"/> */}
+                    className="text-red-600 dark:text-red-400 hover:bg-red-400 hover:text-white dark:hover:text-white"/>
             </ul>
         </aside>
     )

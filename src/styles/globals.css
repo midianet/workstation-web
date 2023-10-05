@@ -20,3 +20,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+#main-progress {
+  height: 4px;
+}
+
+@layer base {
+  progress {
+    border: revert;
+  }
+}

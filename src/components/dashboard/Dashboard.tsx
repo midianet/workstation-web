@@ -1,7 +1,7 @@
-import Chart from "chart.js/auto";
-import { CategoryScale } from "chart.js";
-import { Bar, Pie } from "react-chartjs-2";
-import useAppData from "@/data/hook/useAppData";
+import Chart from "chart.js/auto"
+import { CategoryScale } from "chart.js"
+import { Bar, Pie } from "react-chartjs-2"
+import useAppData from "@/data/hook/useAppData"
 
 Chart.register(CategoryScale);
 
@@ -75,7 +75,7 @@ export default function Dashboard() {
         </div>
         <div className="flex flex-col w-1/3" >
           <div className="chart-container">
-            <h2 style={{ textAlign: "center", padding: '10px' }}>Builds por dia</h2>
+            <h2 style={{ textAlign: "center", padding: '10px' }}>Builds no dia</h2>
               <Pie data={data} options={optionsPie} />
             </div>
         </div>

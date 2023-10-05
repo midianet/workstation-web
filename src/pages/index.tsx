@@ -3,7 +3,7 @@ import Dashboard from "../components/dashboard/Dashboard";
 
 export default function Home() {
   return (
-    <Layout title="Workstation - Devops Manager">
+    <Layout>
         <div>
           <Dashboard/>
         </div>
